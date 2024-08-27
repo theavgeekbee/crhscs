@@ -1,4 +1,6 @@
 ---
+import Important from './Important.astro';
+
 interface Props {
     title: string;
     cta: string;
@@ -6,11 +8,13 @@ interface Props {
     link_text: string;
 }
 const { title, cta, link, link_text } = Astro.props;
+const target = link.startsWith('http') ? '_blank' : '_self';
 ---
 <div class="actions">
     <h2>{title}</h2>
     <p>{cta}</p>
-    <a href={link}>{link_text}</a>
+    <slot />
+    <a href={link} target={target}>{link_text}</a>
 </div>
 <style>
     .actions {
@@ -21,8 +25,11 @@ const { title, cta, link, link_text } = Astro.props;
 		border: 1px solid rgba(var(--accent), 0.2);
         text-align: center;
 	}
+    h2 {
+        color: #fff;
+    }
     a {
-        text-decoration: none;
+        text-decoration: underline dotted;
         color: #f09d9d;
     }
     a:hover {
