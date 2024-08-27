@@ -10,7 +10,7 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="The Cinco Ranch High School Computer Science Club website" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -22,29 +22,24 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 214, 39, 39;
+		--accent-light: 247, 172, 171;
+		--accent-dark: 92, 33, 32;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--card-gradient: linear-gradient(
+			45deg,
+			rgba(var(--accent), 0.2),
+			rgba(var(--accent-dark), 0.2) 30%,
+			rgba(138, 30, 30, 0.2) 60%
+		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>

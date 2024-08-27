@@ -1,0 +1,31 @@
+---
+interface Props {
+    title: string;
+    cta: string;
+    link: string;
+    link_text: string;
+}
+const { title, cta, link, link_text } = Astro.props;
+---
+<div class="actions">
+    <h2>{title}</h2>
+    <p>{cta}</p>
+    <a href={link}>{link_text}</a>
+</div>
+<style>
+    .actions {
+		background-image: var(--card-gradient);
+		border-radius: 0.5rem;
+		padding: 1rem;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 0.2);
+        text-align: center;
+	}
+    a {
+        text-decoration: none;
+        color: #f09d9d;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
